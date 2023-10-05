@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.news {
+  /* Implicit ohne weitere properties */
+  display: grid;
+
+  /* grid-auto-flow: row; */
+
+  /* flexbox-like, nice 2know */
+  /* grid-auto-flow: column; */
+
+  /* Im Gegensatz zu Flexbox sind die Werte bei CSS Grid HARTE Width-Werte, in Flexbox sind es hypothetische Werte */
+  grid-template-columns: 100px 200px 100px 200px 100px;
+  grid-template-columns: 15% 15% 20% 25% 25%;
+
+  /* Wenn weniger colums als grid Kinderda, dann werden automatisch neue rows erstellt */
+
+  grid-template-columns: 40% 30% 20%;
+
+  /* Neue Einheit: Fraction 1fr = 1 Anteil am noch verfügbaren Platz */
+
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+article {
+  padding: 24px;
+}
